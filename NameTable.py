@@ -20,7 +20,7 @@ for filename in sorted(files135B, key=lambda name: name[2:6]+name[:2], reverse=T
                 synonyms[name] = line[0]
 
 
-with open('ID_name.csv', 'w') as fout_id:
+with open('Banks.csv', 'w') as fout_id:
     for key, value in ID_names.items():
         print(key, value, file=fout_id, sep=';')
 
