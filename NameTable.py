@@ -12,10 +12,12 @@ for filename in sorted(files135B, key=lambda name: name[2:6]+name[:2], reverse=T
         fin.readline()
         for line in fin:
             line = line.split(sep=",")
+            name = line[7].replace('"""', '"')
+            name = name.replace('""', '"')
             if line[0] not in ID_names:
-                ID_names[line[0]] = line[7]
-            if line[7] not in synonyms:
-                synonyms[line[7]] = line[0]
+                ID_names[line[0]] = name
+            if name not in synonyms:
+                synonyms[name] = line[0]
 
 
 with open('ID_name.csv', 'w') as fout_id:
