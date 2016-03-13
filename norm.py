@@ -26,9 +26,3 @@ with open('Values.csv', 'w') as fout_norms:
     fout_norms.write("ID;Norm;Value;Date\n")
     for item in norms:
         print(*item, file=fout_norms, sep=';')
-
-N = set()
-for i in norms:
-        if i[1] not in N:
-            N.add(i[1])
-print(N)

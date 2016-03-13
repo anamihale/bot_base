@@ -28,3 +28,5 @@ with open('Synonyms.csv', 'w') as fout_syn:
     for key, value in synonyms.items():
         print(key, value, file=fout_syn, sep=';')
 
+
+
